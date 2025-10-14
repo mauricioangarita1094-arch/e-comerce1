@@ -8,6 +8,6 @@ RUN npm run build --prod
 
 # Etapa 2: Servir con Nginx
 FROM nginx:alpine
-COPY --from=build /app/dist/Proyecto_class_vercel/browser/ /usr/share/nginx/html
+COPY --from=build /app/dist/Proyecto_class_vercel/ /usr/share/nginx/html
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
